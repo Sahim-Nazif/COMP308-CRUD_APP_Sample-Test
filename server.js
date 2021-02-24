@@ -3,6 +3,7 @@ const dotenv=require('dotenv');
 const morgan=require('morgan');
 const compress=require('compression')
 const mongoose=require('mongoose')
+const flash= require('connect-flash')
 const app=express()
 
 
@@ -38,7 +39,7 @@ mongoose
         .catch(err => console.log(err));
 
 app.use(express.static('public/css'));
-
+app.use(flash())
 
 app.listen(process.env.PORT , ()=>{
 
