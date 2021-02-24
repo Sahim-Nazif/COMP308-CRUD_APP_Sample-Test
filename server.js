@@ -2,6 +2,7 @@ const express=require('express')
 const dotenv=require('dotenv');
 const morgan=require('morgan');
 const compress=require('compression')
+const mongoose=require('mongoose')
 const app=express()
 
 
