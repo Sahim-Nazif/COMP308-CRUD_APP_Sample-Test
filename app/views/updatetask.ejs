@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <%- include('./partials/header.ejs') %>
+<body>
+    <div class="container">
+        <%- include('./partials/messages.ejs') %>
+    </div>
+  
+    <div class="comments">
+      
+        <h5> Update Task </h5>
+        <p>You can update  Task and will be visibale on home page</p>
+        
+      </div>
+      <div class="container mt-5">
+      <form action="/task/update/<%- task._id %>" method="POST">
+        <div class="mb-4">
+          <label class="form-label">Task Name</label>
+          <input type="text" class="form-control"  name="taskName" value="<%- task.taskName %>" placeholder="Task Name" required>
+        </div>
+         <div class="mb-4">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control"  name="taskDescription" value="<%- task.taskDescription %>" placeholder="Description" required>
+        </div>
+        <div class="mb-4">
+            <label class="form-label">Start Date</label>
+            <input  class="form-control" name="startDate"  value="<%- task.startDate.toDateString() %>" placeholder="End Date" required>
+          </div>
+        <div class="mb-4">
+          <label class="form-label">End Date</label>
+          <input  class="form-control" name="endDate"  value="<%- task.endDate.toDateString() %>" placeholder="End Date" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Owner</label>
+          <input type="text" class="form-control" name="owner" value="<%- task.owner %>"  placeholder="Owner" required>
+        </div>
+       <button type="submit" class="btn btn-danger">Submit</button>
+        <div class="loginlink">
+        <p class="lead mt-4"> Back to ?  <a href="/" class="loginBack">Home page</a></p>
+        </div>
+      </form>
+      </div>
+   
+</body>
+</html>

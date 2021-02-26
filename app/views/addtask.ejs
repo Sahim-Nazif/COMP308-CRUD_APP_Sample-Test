@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/messages.ejs') %>
+    <div class="comments">
+        <h5> Welcome To Add a Task </h5>
+        <p>You can add your task and will be visibale for all the users</p>
+        
+      </div>
+      <div class="container mt-5">
+      <form action="/task/addtask" method="POST">
+        <div class="mb-4">
+          <label class="form-label">Task Name</label>
+          <input type="text" class="form-control"  name="taskName" placeholder="Task Name" required>
+        </div>
+         <div class="mb-4">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control"  name="taskDescription"  placeholder="Description" required>
+        </div>
+         <div class="mb-4">
+          <label class="form-label">Start Date</label>
+          <input type="date" class="form-control" name="startDate" placeholder="Start Date" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">End Date</label>
+          <input type="date" class="form-control" name="endDate" placeholder="End Date" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Owner</label>
+          <input type="text" class="form-control" name="owner"  placeholder="Owner" required>
+        </div>
+       <button type="submit" class="btn btn-danger">Add Task</button>
+        <div class="loginlink">
+        <p class="lead mt-4"> Back to ?  <a href="/" class="loginBack">Home page</a></p>
+        </div>
+      </form>
+      </div>
+      <div class="container signup-paragraph">
+        <p>Create tasks and each task will have a start and end dates.Tasks  can be created 
+            for any purpose. There is no sign up or login required, create a task and can be visibile
+            on home page for follow up.<br> In addition, task can be updated or removed from the system.
+            This funtionality is available on home page.
+        </p>
+      </div>
+    
+</body>
+</html>

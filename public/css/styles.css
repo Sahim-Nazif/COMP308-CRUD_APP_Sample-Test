@@ -1,0 +1,53 @@
+
+h4{
+    color:crimson
+}
+.headtitle{
+    line-height:30px;
+    letter-spacing: 2px;
+    
+}
+.table{
+    width: 85%;
+    margin-left:10%;
+    margin-top: 4%;
+}
+.backtohomepage{
+    margin-left: 124px;
+    margin-top: 45px;
+    margin-bottom:-30px;
+  }
+  .comments{
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    margin-left:100px;
+}
+.loginlink{
+    text-align: left;
+    margin:-62px 20px 0px 105px;
+}
+.signup-paragraph{
+    margin-left: 500px;
+    margin-top: -500px;
+    width: 400px;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height:30px;
+}
+.form-control{
+    width: 300px;
+}
+
+.message{
+    width:10%;
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .addTaskBtn {
+      margin-left:-85px;
+     
+    }
+  }
